@@ -35,7 +35,7 @@ const fetchCoordsByIP = (ip, callback) => {
     const coords = `${lat}, ${lon}`;
     callback(null, coords);
   });
-}
+};
 
 
 module.exports = { fetchMyIP, fetchCoordsByIP };
