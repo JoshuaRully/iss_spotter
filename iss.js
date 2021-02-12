@@ -69,4 +69,13 @@ const nextISSTimesForMyLocation = (callback) => {
   });
 };
 
-module.exports = { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation };
+const printPassTimes = function(flyoverTimes) {
+  for (const pass of flyoverTimes) {
+    const datetime = new Date(0);
+    datetime.setUTCSeconds(pass.risetime);
+    const duration = pass.duration;
+    console.log(`Next pass on ${datetime} for ${duration} seconds!`);
+  }
+};
+
+module.exports = { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation, printPassTimes };
