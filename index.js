@@ -31,7 +31,7 @@ const printPassTimes = function(flyoverTimes) {
     const datetime = new Date(0);
     datetime.setUTCSeconds(pass.risetime);
     const duration = pass.duration;
-    console.log(`Next pass at ${datetime} for ${duration} seconds!`);
+    console.log(`Next pass on ${datetime} for ${duration} seconds!`);
   }
 };
 
